@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metabook</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url("path/to/your/background.jpg"); /* Replace with your background image path */
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
+
+    .header {
+      background-color: #3B5998;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .search-bar {
+      width: 50%;
+      padding: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      height: 30px;
+    }
+
+    .main-container {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .newsfeed {
+      width: 65%;
+      padding: 15px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .newsfeed h2 { /* Changed from h3 for proper heading hierarchy */
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .message-box {
+      width: 30%;
+      padding: 15px;
+      background-color: #F0F8FF;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .message-box h4 {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .message-form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+
+    .message-input {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      resize: none;
+    }
+
+    .message-button {
+      background-color: #3B5998;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">Metabook</h1>
+
+    <label for="search">Search for people or posts:</label>
+    <input type="text" id="search" class="search-bar" placeholder="Search for people or posts">
+  </header>
+<main class="main-container">
+  <section class="newsfeed">
+    <h2>News Feed</h2>
+    <p>Here's where you'll see updates from your friends and pages you follow.</p>
+  </section>
+  <section class="message-box">
+    <h4>Messenger</h4>
+
+    <label for="message">Type your message:</label>
+    <form class="message-form" onsubmit="return sendMessage()">
+      <textarea name="message" id="message" class="message-input" placeholder="Type your message"></textarea>
+      <button type="submit" class="message-button">Send</button>
+    </form>
+  </section>
+</main>
+</body>
